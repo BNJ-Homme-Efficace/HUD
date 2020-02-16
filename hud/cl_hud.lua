@@ -258,7 +258,10 @@ Citizen.CreateThread( function()
 
         if IsControlPressed( 0, 82 ) then
           if PlayerData.job~= nil then
-					drawTxt3(1.249, 1.453, 1.0,1.0,0.40 , PlayerData.job.label .. " - " ..  PlayerData.job.grade_label ,255, 255, 255, 255) 
+           
+            ESX.ShowAdvancedNotification("Ton métier est le suivant",PlayerData.job.label .. " - " ..  PlayerData.job.grade_label , "", "CHAR_BANK_BOL", 1)
+            PlaySoundFrontend(-1, "CONFIRM_BEEP", "HUD_MINI_GAME_SOUNDSET", 0)
+      
           end
 				end
 
